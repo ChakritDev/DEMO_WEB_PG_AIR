@@ -126,6 +126,25 @@
                     </button>
                 </div>
             </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-gradient-to-br from-blue-600/85 via-blue-500/85 to-blue-700/85 backdrop-blur-lg border-t border-blue-400/40 shadow-2xl w-full">
+                <div class="px-4 sm:px-6 py-6 space-y-4">
+                    <a href="#about" data-i18n="nav-about" class="block text-white hover:text-orange-300 transition font-medium py-2">เกี่ยวกับเรา</a>
+                    <a href="#services" data-i18n="nav-services" class="block text-white hover:text-orange-300 transition font-medium py-2">บริการของเรา</a>
+                    <a href="#portfolio" data-i18n="nav-portfolio" class="block text-white hover:text-orange-300 transition font-medium py-2">ผลงานติดตั้ง</a>
+                    
+                    <div class="flex items-center bg-white/10 rounded-full px-2 py-1 border border-white/20">
+                        <button onclick="changeLang('th')" id="btn-th-mobile" class="lang-btn px-2 py-1 text-xs transition active">TH</button>
+                        <span class="text-gray-300">|</span>
+                        <button onclick="changeLang('en')" id="btn-en-mobile" class="lang-btn px-2 py-1 text-xs transition">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button onclick="changeLang('zh')" id="btn-zh-mobile" class="lang-btn px-2 py-1 text-xs transition">ZH</button>
+                    </div>
+
+                    <a href="#contact" data-i18n="nav-contact" class="block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition shadow-lg shadow-orange-400/40 text-center font-medium">ติดต่อเรา</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -635,7 +654,24 @@
             appendMessage('ai', aiResponse);
         }
 
-        window.onload = () => { changeLang(localStorage.getItem('preferredLang') || 'th'); };
+        window.onload = () => { 
+            changeLang(localStorage.getItem('preferredLang') || 'th');
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        };
         document.getElementById('ai-input').addEventListener('keypress', (e) => { if (e.key === 'Enter') sendAIMessage(); });
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
