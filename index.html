@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PG-Air Service Pro | Professional Air Conditioning Services</title>
+    <title>PG Air Equipment | ผู้เชี่ยวชาญแอร์และอุปกรณ์ทำความเย็น เกาะพะงัน</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -59,6 +59,39 @@
             0%, 80%, 100% { transform: scale(0); }
             40% { transform: scale(1); }
         }
+
+        /* Professional Image Card Styling */
+        .service-image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 2rem;
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .service-image-card:hover img {
+            transform: scale(1.1);
+        }
+        .service-image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+        }
+        .image-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 40%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 smooth-scroll">
@@ -72,10 +105,9 @@
                 </div>
                 
                 <div class="hidden lg:flex space-x-8 items-center font-medium text-sm">
+                    <a href="#about" data-i18n="nav-about" class="text-gray-600 hover:text-blue-600 transition">เกี่ยวกับเรา</a>
                     <a href="#services" data-i18n="nav-services" class="text-gray-600 hover:text-blue-600 transition">บริการของเรา</a>
                     <a href="#portfolio" data-i18n="nav-portfolio" class="text-gray-600 hover:text-blue-600 transition">ผลงานติดตั้ง</a>
-                    <a href="#about" data-i18n="nav-about" class="text-gray-600 hover:text-blue-600 transition">ทำไมต้องเลือกเรา</a>
-                    <a href="#parts" data-i18n="nav-parts" class="text-gray-600 hover:text-blue-600 transition">อะไหล่แท้</a>
                     
                     <div class="flex items-center bg-gray-100 rounded-full px-2 py-1 ml-4 border border-gray-200">
                         <button onclick="changeLang('th')" id="btn-th" class="lang-btn px-2 py-1 text-xs transition active">TH</button>
@@ -102,15 +134,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 text-center lg:text-left z-10">
-                    <div data-i18n="hero-badge" class="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-sm font-bold mb-6 tracking-wide">
-                        อันดับ 1 เรื่องบริการแอร์ครบวงจร
+                    <div data-i18n="hero-badge" class="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
+                        ตัวแทนจำหน่ายแอร์รายใหญ่บนเกาะพะงัน
                     </div>
                     <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">
                         <span data-i18n="hero-title-1">เย็นสบาย มั่นใจ</span> <br>
-                        <span data-i18n="hero-title-2" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">ระดับมืออาชีพ</span>
+                        <span data-i18n="hero-title-2" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 font-extrabold tracking-tight">ด้วยมืออาชีพกว่า 15 ปี</span>
                     </h1>
                     <p data-i18n="hero-desc" class="text-lg md:text-xl mb-10 text-gray-600 max-w-xl">
-                        เราคือผู้เชี่ยวชาญด้านระบบปรับอากาศ จำหน่าย ติดตั้ง ล้าง และจำหน่ายอะไหล่แท้ทุกยี่ห้อ รับประกันงานบริการโดยทีมช่างประสบการณ์สูง
+                        พีจีแอร์ อีควิพเม้นท์ ศูนย์บริการและจำหน่ายแอร์ อะไหล่ และอุปกรณ์ทำความเย็นทุกชนิดบนพื้นที่เกาะพะงัน มั่นใจในคุณภาพและบริการที่ไว้ใจได้ในทุกโครงการ
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                         <a href="#contact" data-i18n="hero-btn-book" class="px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-orange-200 transition transform hover:-translate-y-1 text-center">
@@ -140,8 +172,8 @@
         <div class="max-w-6xl mx-auto bg-white rounded-[2.5rem] shadow-2xl shadow-blue-900/10 border border-gray-100 p-8 md:p-12 overflow-hidden text-center lg:text-left">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center">
                 <div class="border-r-0 lg:border-r border-gray-100 last:border-0">
-                    <div class="text-3xl md:text-5xl font-black text-blue-600 mb-2">12+</div>
-                    <div data-i18n="stat-years" class="text-gray-500 font-medium text-sm uppercase tracking-wider">ปีแห่งความสำเร็จ</div>
+                    <div class="text-3xl md:text-5xl font-black text-blue-600 mb-2">15+</div>
+                    <div data-i18n="stat-years" class="text-gray-500 font-medium text-sm uppercase tracking-wider">ปีแห่งความเชี่ยวชาญ</div>
                 </div>
                 <div class="border-r-0 lg:border-r border-gray-100 last:border-0">
                     <div class="text-3xl md:text-5xl font-black text-blue-600 mb-2">15,000+</div>
@@ -160,6 +192,55 @@
                         </div>
                     </div>
                     <div data-i18n="stat-rating" class="text-gray-500 font-medium text-sm uppercase tracking-wider">คะแนนความพึงพอใจ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mission & Vision Section - MODERNIZED WITH PROFESSIONAL IMAGE CARDS -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 text-left">
+                    <h2 data-i18n="about-title" class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 tracking-tight">เกี่ยวกับ พีจีแอร์ อีควิพเม้นท์</h2>
+                    <div class="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>
+                    <p data-i18n="about-mission" class="text-gray-600 text-lg leading-relaxed mb-6">
+                        เราคือผู้เชี่ยวชาญด้านระบบปรับอากาศและอุปกรณ์ทำความเย็นแบบครบวงจร ให้บริการตั้งแต่การจำหน่าย ติดตั้ง ไปจนถึงการบำรุงรักษา ทั้งในระดับครัวเรือนและอุตสาหกรรมบนพื้นที่เกาะพะงัน ทีมงานมืออาชีพของเราพร้อมให้บริการด้วยความรวดเร็วและใส่ใจในทุกรายละเอียด
+                    </p>
+                    <div class="bg-blue-600 p-8 rounded-[2rem] text-white shadow-2xl shadow-blue-900/10 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 -mr-16 -mt-16 rounded-full transition-transform group-hover:scale-150 duration-1000"></div>
+                        <h4 data-i18n="about-vision-head" class="text-xl font-bold mb-3 flex items-center gap-3">
+                            <span class="text-orange-400 text-2xl">🎯</span>
+                            วิสัยทัศน์ของเรา
+                        </h4>
+                        <p data-i18n="about-vision-text" class="text-blue-50 text-xl font-semibold italic">"เราจะเป็นร้านแอร์ที่ช่างและลูกค้าเลือก"</p>
+                    </div>
+                </div>
+
+                <!-- Professional Image Grid -->
+                <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                    <!-- Household Image Card -->
+                    <div class="service-image-card group">
+                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800&auto=format&fit=crop" alt="Residential Air Conditioning">
+                        <div class="image-card-overlay">
+                            <span class="w-10 h-1 bg-orange-400 mb-4 rounded-full"></span>
+                            <h4 data-i18n="type-home" class="text-2xl font-bold mb-1">ครัวเรือน</h4>
+                            <p data-i18n="type-home-desc-premium" class="text-blue-200 text-sm font-light">Residential Expert Solutions</p>
+                        </div>
+                    </div>
+                    <!-- Industrial Image Card -->
+                    <div class="service-image-card group">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop" alt="Industrial Cooling System">
+                        <div class="image-card-overlay">
+                            <span class="w-10 h-1 bg-blue-400 mb-4 rounded-full"></span>
+                            <h4 data-i18n="type-industry" class="text-2xl font-bold mb-1">อุตสาหกรรม</h4>
+                            <p data-i18n="type-industry-desc-premium" class="text-blue-200 text-sm font-light">Large Scale Industrial Systems</p>
+                        </div>
+                    </div>
+                    <!-- Modern Partnership Banner -->
+                    <div class="sm:col-span-2 bg-white p-8 rounded-[2rem] shadow-xl border border-blue-50 flex items-center gap-6 group transition-all duration-500 hover:border-blue-300">
+                        <div class="w-16 h-16 bg-blue-50 text-3xl rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500">🤝</div>
+                        <p data-i18n="partnership" class="text-base font-medium text-gray-700 leading-relaxed italic">"พร้อมเป็นพันธมิตรที่ไว้ใจได้ในทุกโครงการระบบทำความเย็นบนเกาะพะงัน"</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -397,7 +478,9 @@
     </button>
 
     <footer class="bg-gray-900 py-12 text-center text-gray-500 text-sm">
-        <p>© 2024 PG-Air Service Pro. All Rights Reserved.</p>
+        <div class="mb-4 text-white font-bold text-lg tracking-widest uppercase">PG AIR EQUIPMENT</div>
+        <p class="mb-4 italic" data-i18n="footer-slogan">"ที่ไหนมีแอร์ ที่นั่นมีเรา นึกถึงแอร์ นึกถึงเรา พีจีแอร์ อีควิพเม้นท์"</p>
+        <p>© 2024 PG Air Equipment. Koh Phangan Expert Services.</p>
     </footer>
 
     <script>
@@ -406,69 +489,61 @@
 
         const translations = {
             th: {
-                "nav-services": "บริการของเรา", "nav-portfolio": "ผลงานติดตั้ง", "nav-about": "ทำไมต้องเลือกเรา", "nav-parts": "อะไหล่แท้", "nav-contact": "ติดต่อเรา",
-                "hero-badge": "อันดับ 1 เรื่องบริการแอร์ครบวงจร", "hero-title-1": "เย็นสบาย มั่นใจ", "hero-title-2": "ระดับมืออาชีพ",
-                "hero-desc": "เราคือผู้เชี่ยวชาญด้านระบบปรับอากาศ จำหน่าย ติดตั้ง ล้าง และจำหน่ายอะไหล่แท้ทุกยี่ห้อ รับประกันงานบริการโดยทีมช่างประสบการณ์สูง",
+                "nav-about": "เกี่ยวกับเรา", "nav-services": "บริการของเรา", "nav-portfolio": "ผลงานติดตั้ง", "nav-contact": "ติดต่อเรา",
+                "hero-badge": "ตัวแทนจำหน่ายแอร์รายใหญ่บนเกาะพะงัน", "hero-title-1": "เย็นสบาย มั่นใจ", "hero-title-2": "ด้วยมืออาชีพกว่า 15 ปี",
+                "hero-desc": "พีจีแอร์ อีควิพเม้นท์ ศูนย์บริการและจำหน่ายแอร์ อะไหล่ และอุปกรณ์ทำความเย็นทุกชนิดบนพื้นที่เกาะพะงัน มั่นใจในคุณภาพและบริการที่ไว้ใจได้ในทุกโครงการ",
                 "hero-btn-book": "จองคิวรับบริการ", "btn-ai-consult": "ปรึกษา AI อัจฉริยะ",
-                "stat-years": "ปีแห่งความสำเร็จ", "stat-customers": "ลูกค้าที่ไว้วางใจ", "stat-installs": "งานติดตั้งสำเร็จ", "stat-rating": "คะแนนความพึงพอใจ",
-                "services-title": "บริการครบวงจร เรื่องแอร์ไว้ใจเรา", "portfolio-title": "ผลงานการติดตั้งและบริการ", "portfolio-more": "สนใจผลงานติดต่อเรา",
+                "stat-years": "ปีแห่งความเชี่ยวชาญ", "stat-customers": "ลูกค้าที่ไว้วางใจ", "stat-installs": "งานติดตั้งสำเร็จ", "stat-rating": "คะแนนความพึงพอใจ",
+                "about-title": "เกี่ยวกับ พีจีแอร์ อีควิพเม้นท์", "about-mission": "เราคือผู้เชี่ยวชาญด้านระบบปรับอากาศและอุปกรณ์ทำความเย็นแบบครบวงจร ให้บริการตั้งแต่การจำหน่าย ติดตั้ง ไปจนถึงการบำรุงรักษา ทั้งในระดับครัวเรือนและอุตสาหกรรมบนพื้นที่เกาะพะงัน",
+                "about-vision-head": "วิสัยทัศน์ของเรา", "about-vision-text": "\"เราจะเป็นร้านแอร์ที่ช่างและลูกค้าเลือก\"",
+                "type-home": "ครัวเรือน", "type-home-desc-premium": "Residential Expert Solutions", 
+                "type-industry": "อุตสาหกรรม", "type-industry-desc-premium": "Large Scale Industrial Systems",
+                "partnership": "\"พร้อมเป็นพันธมิตรที่ไว้ใจได้ในทุกโครงการระบบทำความเย็นบนเกาะพะงัน\"",
+                "services-title": "บริการของเรา", "s1-title": "จำหน่ายและติดตั้ง", "s1-desc": "ตัวแทนจำหน่ายแอร์หลากหลายแบรนด์ชั้นนำ พร้อมทีมติดตั้งมืออาชีพที่ใส่ใจในทุกรายละเอียด",
+                "s2-title": "อะไหล่และอุปกรณ์", "s2-desc": "จำหน่ายอะไหล่แอร์และอุปกรณ์ทำความเย็นทุกชนิด สต็อกแน่น พร้อมเปลี่ยนทันที ไม่ต้องรอนาน",
+                "s3-title": "บำรุงรักษาพรีเมียม", "s3-desc": "บริการล้างแอร์ฆ่าเชื้อด้วยน้ำยาเฉพาะทาง ตรวจเช็กระบบ 10 รายการ เพื่อประสิทธิภาพสูงสุด",
+                "portfolio-title": "ผลงานการติดตั้งและบริการ", "portfolio-more": "สนใจผลงานติดต่อเรา",
                 "p1-cat": "สำนักงาน", "p1-title": "ระบบแอร์ VRV สำหรับสำนักงาน",
                 "p2-cat": "บ้านพักอาศัย", "p2-title": "ติดตั้งแอร์ Inverter บ้านพักอาศัย",
                 "p3-cat": "การบำรุงรักษา", "p3-title": "ล้างแอร์พรีเมียมฆ่าเชื้อโรค 99.9%",
-                "p4-cat": "ร้านค้า/คาเฟ่", "p4-title": "ติดตั้งแอร์สี่ทิศทางในร้านกาแฟ",
-                "p5-cat": "โรงงาน", "p5-title": "งานวางระบบแอร์โรงงานอุตสาหกรรม",
-                "p6-cat": "คอนโดมิเนียม", "p6-title": "ติดตั้งแอร์ Multi-Split สำหรับคอนโด",
-                "contact-title": "ติดต่อขอรับบริการ", "contact-desc": "สอบถามปรึกษาปัญหาแอร์ฟรี หรือแจ้งความต้องการผ่านฟอร์ม ทีมงานจะติดต่อกลับโดยเร็วที่สุด",
-                "contact-info-header": "ข้อมูลการติดต่อ", "label-address": "ที่ตั้งร้าน", "val-address": "123/45 ถนนสุขุมวิท เขตวัฒนา กรุงเทพฯ 10110",
-                "label-phone": "เบอร์โทรศัพท์", "label-email": "อีเมล", "form-label-service": "ประเภทบริการที่ต้องการ", "form-label-name": "ชื่อผู้ติดต่อ", 
-                "form-label-phone": "เบอร์โทรศัพท์", "form-label-area": "เขตพื้นที่/ที่อยู่เบื้องต้น", "form-label-date": "วันที่สะดวก", 
-                "form-label-time": "ช่วงเวลา", "time-morning": "เช้า (09:00-12:00)", "time-afternoon": "บ่าย (13:00-17:00)", 
-                "p-name": "ระบุชื่อของคุณ", "p-area": "เช่น เขตวัฒนา กรุงเทพฯ", "opt-cleaning": "ล้างแอร์ประจำปี", "opt-installation": "ติดตั้ง/ย้ายแอร์ใหม่", 
-                "opt-repair": "ซ่อมแอร์ไม่เย็น / น้ำหยด", "opt-parts": "สั่งซื้ออะไหล่แท้", "form-btn-submit": "ส่งข้อมูลเพื่อให้เจ้าหน้าที่ติดต่อกลับ", 
-                "msg-success": "ได้รับข้อมูลแล้ว! เจ้าหน้าที่จะติดต่อกลับใน 15 นาที", "ai-welcome": "สวัสดีครับ! ผมคือผู้ช่วย AI ปรึกษาเรื่องแอร์ได้เลยครับ",
+                "contact-title": "ติดต่อขอรับบริการ", "contact-desc": "พีจีแอร์ อีควิพเม้นท์ พร้อมเป็นพันธมิตรที่ไว้ใจได้ในทุกโครงการด้านความเย็นบนเกาะพะงัน",
+                "form-label-service": "ประเภทบริการที่ต้องการ", "form-label-name": "ชื่อผู้ติดต่อ", "form-label-phone": "เบอร์โทรศัพท์", "form-label-area": "เขตพื้นที่/ที่อยู่ (เกาะพะงัน)",
+                "p-name": "ระบุชื่อของคุณ", "p-area": "เช่น ท้องศาลา, หินกอง", "opt-parts": "สั่งซื้ออะไหล่แท้/อุปกรณ์", "footer-slogan": "\"ที่ไหนมีแอร์ ที่นั่นมีเรา นึกถึงแอร์ นึกถึงเรา พีจีแอร์ อีควิพเม้นท์\"",
+                "ai-welcome": "สวัสดีครับ! ผมคือผู้ช่วย AI จาก PG AIR EQUIPMENT ปรึกษาเรื่องแอร์ได้เลยครับ",
                 "ai-input-placeholder": "พิมพ์คำถามของคุณ...", "ai-online": "พร้อมให้คำปรึกษา 24 ชม."
             },
             en: {
-                "nav-services": "Services", "nav-portfolio": "Portfolio", "nav-about": "Why Us", "nav-parts": "Parts", "nav-contact": "Contact",
-                "hero-badge": "No.1 AC Experts", "hero-title-1": "Cool & Confident", "hero-title-2": "Professional Care",
-                "hero-desc": "Expert air conditioning services: sales, installation, cleaning, and genuine parts with certified technicians.",
+                "nav-about": "About", "nav-services": "Services", "nav-portfolio": "Portfolio", "nav-contact": "Contact",
+                "hero-badge": "Major AC Dealer on Koh Phangan", "hero-title-1": "Cool & Confident", "hero-title-2": "With 15+ Years Experience",
+                "hero-desc": "PG Air Equipment: Authorized dealer and service center for ACs, parts, and cooling systems on Koh Phangan.",
                 "hero-btn-book": "Book Now", "btn-ai-consult": "AI Support",
-                "stat-years": "Years of Success", "stat-customers": "Trusted Customers", "stat-installs": "Successful Installs", "stat-rating": "Satisfaction Score",
-                "services-title": "Comprehensive Air Solutions", "portfolio-title": "Installation & Service Works", "portfolio-more": "Interested? Contact Us",
-                "p1-cat": "Office Project", "p1-title": "Centralized VRV Systems for Offices",
-                "p2-cat": "Residential", "p2-title": "Inverter AC Installation for Homes",
-                "p3-cat": "Maintenance", "p3-title": "Premium 99.9% Sanitized Air Cleaning",
-                "p4-cat": "Retail/Cafe", "p4-title": "Cassette Type AC for Modern Cafes",
-                "p5-cat": "Industrial", "p5-title": "Large Scale Industrial AC Systems",
-                "p6-cat": "Condominium", "p6-title": "Multi-Split System for Smart Condos",
-                "contact-title": "Contact Us", "contact-desc": "Get free consultation or fill out the form, our team will reach back as soon as possible.",
-                "contact-info-header": "Contact Information", "label-address": "Shop Address", "val-address": "Sukhumvit Rd, Watthana, Bangkok 10110",
-                "label-phone": "Phone", "label-email": "Email", "form-label-service": "Service Type", "form-label-name": "Name", 
-                "form-label-phone": "Phone Number", "form-label-area": "Service Area", "form-label-date": "Date", 
-                "form-label-time": "Time Slot", "time-morning": "Morning (09:00-12:00)", "time-afternoon": "Afternoon (13:00-17:00)", 
-                "p-name": "Your Name", "p-area": "e.g., Sukhumvit, Bangkok", "opt-cleaning": "Annual Cleaning", "opt-installation": "Installation", 
-                "opt-repair": "Repair/Leaking", "opt-parts": "Spare Parts", "form-btn-submit": "Request Callback", 
-                "msg-success": "Sent! We'll call you in 15 mins", "ai-welcome": "Hello! I am your AI assistant. How can I help you?",
+                "stat-years": "Years Expertise", "stat-customers": "Customers", "stat-installs": "Installs", "stat-rating": "Rating",
+                "about-title": "About PG Air Equipment", "about-mission": "Specialists in comprehensive AC and cooling systems. From sales and installation to maintenance for residential and industrial sectors on Koh Phangan.",
+                "about-vision-head": "Our Vision", "about-vision-text": "\"To be the choice of AC for both technicians and customers\"",
+                "type-home": "Residential", "type-home-desc-premium": "Home Expert Solutions",
+                "type-industry": "Industrial", "type-industry-desc-premium": "Large Scale Systems",
+                "partnership": "\"Your trusted partner for all cooling projects on Koh Phangan\"",
+                "services-title": "Our Services", "s1-title": "Sales & Installation", "s2-title": "Spare Parts", "s3-title": "Maintenance",
+                "portfolio-title": "Installation Portfolio", "contact-title": "Contact Us", "contact-desc": "PG Air Equipment: Your expert cooling partner on Koh Phangan.",
+                "form-label-service": "Service Type", "form-label-name": "Name", "form-label-phone": "Phone", "form-label-area": "Area (Koh Phangan)",
+                "ai-welcome": "Hello! I am your AI assistant from PG AIR EQUIPMENT. How can I help you today?",
                 "ai-input-placeholder": "Type your question...", "ai-online": "Online 24/7"
             },
             zh: {
-                "nav-services": "服务", "nav-portfolio": "案例", "nav-about": "优势", "nav-parts": "配件", "nav-contact": "联系",
-                "hero-badge": "排名第一的空调专家", "hero-title-1": "舒适清爽 信心保障", "hero-title-2": "专业服务",
-                "hero-desc": "空调系统专家：提供各大品牌的销售、安装、清洗及原厂配件服务。",
+                "nav-about": "关于我们", "nav-services": "我们的服务", "nav-portfolio": "工程案例", "nav-contact": "联系我们",
+                "hero-badge": "帕岸岛大型空调经销商", "hero-title-1": "舒适清爽 信心保障", "hero-title-2": "15年以上专业经验",
+                "hero-desc": "PG Air Equipment：帕岸岛授权的空调经销商和服务中心。提供配件和制冷系统服务。",
                 "hero-btn-book": "立即预约", "btn-ai-consult": "AI 助手",
-                "stat-years": "成功的岁月", "stat-customers": "值得信赖的客户", "stat-installs": "成功安装", "stat-rating": "满意度评分",
-                "services-title": "全方位空调解决方案", "portfolio-title": "工程案例展示", "portfolio-more": "有意请联系我们",
-                "p1-cat": "办公项目", "p1-title": "办公楼中央 VRV 空调系统",
-                "p2-cat": "住宅项目", "p2-title": "高档住宅变频空调安装",
-                "p3-cat": "Maintenance", "p3-title": "99.9% 深度杀菌清洗服务",
-                "contact-title": "联系我们", "contact-desc": "获取免费咨询或填写表格,我们的团队将尽快与您联系进行报价评估。",
-                "contact-info-header": "联络资讯", "label-address": "商店地址", "val-address": "Sukhumvit Rd, Bangkok 10110",
-                "label-phone": "电话号码", "label-email": "电子邮件", "form-label-service": "所需服务类型", "form-label-name": "联系人姓名", 
-                "form-label-phone": "电话号码", "form-label-area": "服务区域/地址", "form-label-date": "预约日期", 
-                "form-label-time": "预约时间", "time-morning": "早上 (09:00-12:00)", "time-afternoon": "下午 (13:00-17:00)", 
-                "p-name": "输入您的姓名", "p-area": "例如：曼谷瓦塔纳区", "opt-cleaning": "年度清洗", "opt-installation": "新机安装", 
-                "opt-repair": "空调维修", "opt-parts": "购买配件", "form-btn-submit": "提交回电请求", 
-                "msg-success": "已收到！我们将在 15 分鐘內回电", "ai-welcome": "您好！我是您的 AI 助手。有什么可以幫您的吗？",
+                "stat-years": "专业经验", "stat-customers": "信任客户", "stat-installs": "成功案例", "stat-rating": "满意评分",
+                "about-title": "关于 PG Air Equipment", "about-mission": "我们是空调和制冷系统的专家。为帕岸岛的家庭和工业提供从销售、安装到维护的全方位服务。",
+                "about-vision-head": "我们的愿景", "about-vision-text": "\"成为技师和客户的首选空调店\"",
+                "type-home": "家庭住宅", "type-home-desc-premium": "家居专家方案",
+                "type-industry": "工业领域", "type-industry-desc-premium": "大型系统工程",
+                "partnership": "\"帕岸岛制冷项目的忠实合作伙伴\"",
+                "services-title": "我们的服务", "s1-title": "销售与安装", "s2-title": "原厂配件", "s3-title": "专业维护",
+                "portfolio-title": "项目工程展示", "contact-title": "联系我们", "contact-desc": "PG Air Equipment 愿成为您在帕岸岛的制冷专家伙伴。",
+                "form-label-service": "服务类型", "form-label-name": "姓名", "form-label-phone": "电话", "form-label-area": "区域 (帕岸岛)",
+                "ai-welcome": "您好！我是来自 PG AIR EQUIPMENT 的 AI 助手。有什么可以帮您的吗？",
                 "ai-input-placeholder": "在此输入疑问...", "ai-online": "24小时在线"
             }
         };
