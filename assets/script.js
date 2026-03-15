@@ -1,4 +1,3 @@
-<script>
 const apiKey = ""; 
 let currentLanguage = 'th';
 
@@ -176,4 +175,3 @@ window.onload = () => {
         });
     }
 };
-</script>
