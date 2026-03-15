@@ -602,17 +602,34 @@
 
         function changeLang(lang) {
             currentLanguage = lang;
+             
+            // อัปเดทข้อความ
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) el.textContent = translations[lang][key];
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
             });
+            
+           // อัปเดท placeholder
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (translations[lang][key]) el.placeholder = translations[lang][key];
+                if (translations[lang] && translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
             });
+            
+            // ลบปุ่มแบบเก่า
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            const activeBtn = document.getElementById(`btn-${lang}`);
-            if (activeBtn) activeBtn.classList.add('active');
+            
+            // เพิ่มปุ่มแบบใหม่ (ทั้ง desktop และ mobile)
+            const desktopBtn = document.getElementById(`btn-${lang}`);
+            const mobileBtn = document.getElementById(`btn-${lang}-mobile`);
+            
+            if (desktopBtn) desktopBtn.classList.add('active');
+            if (mobileBtn) mobileBtn.classList.add('active');
+            
+            // บันทึกค่า
             localStorage.setItem('preferredLang', lang);
         }
 
