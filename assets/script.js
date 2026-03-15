@@ -142,16 +142,18 @@ window.onload = () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking on links
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
+
+        // Close mobile menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
 
     // AI chat submit with Enter
     const aiInput = document.getElementById('ai-input');
@@ -173,5 +175,27 @@ window.onload = () => {
             const successMsg = document.getElementById('successMsg');
             if (successMsg) successMsg.classList.remove('hidden');
         });
+    }
+
+    // Lazy load Google Map iframe content for performance
+    const mapFrame = document.getElementById('google-map-iframe');
+    if (mapFrame && mapFrame.dataset.src) {
+        const loadMap = () => {
+            mapFrame.src = mapFrame.dataset.src;
+        };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadMap();
+                        obs.disconnect();
+                    }
+                });
+            }, { rootMargin: '300px' });
+            observer.observe(mapFrame);
+        } else {
+            loadMap();
+        }
     }
 };

@@ -6,8 +6,8 @@
     <meta name="description" content="PG Air Equipment ตัวแทนจำหน่ายและติดตั้งแอร์บนเกาะพะงัน พร้อมบริการล้างแอร์ ซ่อมแอร์ และจำหน่ายอะไหล่แอร์ครบวงจร ประสบการณ์กว่า 15 ปี">
     <meta name="keywords" content="แอร์, เครื่องปรับอากาศ, เกาะพะงัน, ล้างแอร์, ซ่อมแอร์, ติดตั้งแอร์, อะไหล่แอร์, PG Air, ร้านแอร์, สุราษฎร์ธานี">
     <title>PG Air Equipment | ผู้เชี่ยวชาญแอร์และอุปกรณ์ทำความเย็น เกาะพะงัน</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/script.js"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script defer src="assets/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Prompt', sans-serif; }
@@ -151,12 +151,13 @@
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <header class="hero-bg min-h-screen flex items-center pt-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 text-center lg:text-left z-10">
-                    <div data-i18n="hero-badge" class="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
+                    <div data-i18n="hero-badge" class="inline-block px-4 py-1.5 bg-blue-200 text-blue-700 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
                         ตัวแทนจำหน่ายแอร์รายใหญ่บนเกาะพะงัน
                     </div>
                     <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-gray-900">
@@ -167,7 +168,7 @@
                         พีจีแอร์ อีควิพเม้นท์ ศูนย์บริการและจำหน่ายแอร์ อะไหล่ และอุปกรณ์ทำความเย็นทุกชนิดบนพื้นที่เกาะพะงัน มั่นใจในคุณภาพและบริการที่ไว้ใจได้ในทุกโครงการ
                     </p>
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                        <a href="#contact" data-i18n="hero-btn-book" class="px-10 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-orange-200 transition transform hover:-translate-y-1 text-center">
+                        <a href="#contact" data-i18n="hero-btn-book" class="px-10 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-2xl font-bold text-lg shadow-xl shadow-orange-300 transition transform hover:-translate-y-1 text-center">
                             จองคิวรับบริการ
                         </a>
                         <button onclick="toggleAIChat()" class="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold text-lg shadow-xl shadow-blue-200 transition transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
@@ -207,10 +208,10 @@
                 </div>
                 <div>
                     <div class="flex justify-center lg:justify-start items-center gap-2 mb-2">
-                        <span class="text-3xl md:text-5xl font-black text-orange-500">4.9</span>
+                        <span class="text-3xl md:text-5xl font-black text-orange-700">4.9</span>
                         <div class="flex flex-col items-start">
-                            <div class="flex text-orange-400 text-xs md:text-sm">★★★★★</div>
-                            <span class="text-[10px] md:text-xs font-bold text-gray-400">/ 5.0</span>
+                            <div class="flex text-orange-500 text-xs md:text-sm">★★★★★</div>
+                            <span class="text-[10px] md:text-xs font-bold text-gray-600">/ 5.0</span>
                         </div>
                     </div>
                     <div data-i18n="stat-rating" class="text-gray-500 font-medium text-sm uppercase tracking-wider">คะแนนความพึงพอใจ</div>
@@ -230,10 +231,10 @@
                     </p>
                     <div class="bg-blue-600 p-8 rounded-[2rem] text-white shadow-2xl shadow-blue-900/10 relative overflow-hidden group">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 -mr-16 -mt-16 rounded-full transition-transform group-hover:scale-150 duration-1000"></div>
-                        <h4 data-i18n="about-vision-head" class="text-xl font-bold mb-3 flex items-center gap-3">
+                        <h3 data-i18n="about-vision-head" class="text-xl font-bold mb-3 flex items-center gap-3">
                             <span class="text-orange-400 text-2xl">🎯</span>
                             วิสัยทัศน์ของเรา
-                        </h4>
+                        </h3>
                         <p data-i18n="about-vision-text" class="text-blue-50 text-xl font-semibold italic">"เราจะเป็นร้านแอร์ที่ช่างและลูกค้าเลือก"</p>
                     </div>
                 </div>
@@ -245,7 +246,7 @@
                         <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800&auto=format&fit=crop" alt="Residential Air Conditioning">
                         <div class="image-card-overlay">
                             <span class="w-10 h-1 bg-orange-400 mb-4 rounded-full"></span>
-                            <h4 data-i18n="type-home" class="text-2xl font-bold mb-1">ครัวเรือน</h4>
+                            <h3 data-i18n="type-home" class="text-2xl font-bold mb-1">ครัวเรือน</h3>
                             <p data-i18n="type-home-desc-premium" class="text-blue-200 text-sm font-light">Residential Expert Solutions</p>
                         </div>
                     </div>
@@ -254,7 +255,7 @@
                         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop" alt="Industrial Cooling System">
                         <div class="image-card-overlay">
                             <span class="w-10 h-1 bg-blue-400 mb-4 rounded-full"></span>
-                            <h4 data-i18n="type-industry" class="text-2xl font-bold mb-1">อุตสาหกรรม</h4>
+                            <h3 data-i18n="type-industry" class="text-2xl font-bold mb-1">อุตสาหกรรม</h3>
                             <p data-i18n="type-industry-desc-premium" class="text-blue-200 text-sm font-light">Large Scale Industrial Systems</p>
                         </div>
                     </div>
@@ -313,7 +314,7 @@
                          onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition duration-300 p-8 flex flex-col justify-end text-white">
                         <span data-i18n="p1-cat" class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2">Office Project</span>
-                        <h4 data-i18n="p1-title" class="text-xl font-bold leading-tight">ระบบแอร์ VRV สำหรับสำนักงาน</h4>
+                        <h3 data-i18n="p1-title" class="text-xl font-bold leading-tight">ระบบแอร์ VRV สำหรับสำนักงาน</h3>
                     </div>
                 </div>
                 <div class="portfolio-card group relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3] bg-blue-50">
@@ -322,7 +323,7 @@
                          onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition duration-300 p-8 flex flex-col justify-end text-white">
                         <span data-i18n="p2-cat" class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2">Residential</span>
-                        <h4 data-i18n="p2-title" class="text-xl font-bold leading-tight">ติดตั้งแอร์ Inverter บ้านพักอาศัย</h4>
+                        <h3 data-i18n="p2-title" class="text-xl font-bold leading-tight">ติดตั้งแอร์ Inverter บ้านพักอาศัย</h3>
                     </div>
                 </div>
                 <div class="portfolio-card group relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3] bg-blue-50">
@@ -331,7 +332,7 @@
                          onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition duration-300 p-8 flex flex-col justify-end text-white">
                         <span data-i18n="p3-cat" class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2">Maintenance</span>
-                        <h4 data-i18n="p3-title" class="text-xl font-bold leading-tight">ล้างแอร์พรีเมียมฆ่าเชื้อโรค 99.9%</h4>
+                        <h3 data-i18n="p3-title" class="text-xl font-bold leading-tight">ล้างแอร์พรีเมียมฆ่าเชื้อโรค 99.9%</h3>
                     </div>
                 </div>
                 <!-- แถวที่ 2 -->
@@ -341,7 +342,7 @@
                          onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition duration-300 p-8 flex flex-col justify-end text-white">
                         <span data-i18n="p4-cat" class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2">Commercial</span>
-                        <h4 data-i18n="p4-title" class="text-xl font-bold leading-tight">ติดตั้งแอร์สี่ทิศทางในร้านกาแฟ</h4>
+                        <h3 data-i18n="p4-title" class="text-xl font-bold leading-tight">ติดตั้งแอร์สี่ทิศทางในร้านกาแฟ</h3>
                     </div>
                 </div>
                 <div class="portfolio-card group relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3] bg-blue-50">
@@ -350,16 +351,16 @@
                          onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition duration-300 p-8 flex flex-col justify-end text-white">
                         <span data-i18n="p5-cat" class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2">Industrial</span>
-                        <h4 data-i18n="p5-title" class="text-xl font-bold leading-tight">งานวางระบบแอร์โรงงานอุตสาหกรรม</h4>
+                        <h3 data-i18n="p5-title" class="text-xl font-bold leading-tight">งานวางระบบแอร์โรงงานอุตสาหกรรม</h3>
                     </div>
                 </div>
                 <div class="portfolio-card group relative overflow-hidden rounded-3xl shadow-xl aspect-[4/3] bg-blue-50">
-                    <img src="https://images.unsplash.com/photo-1599933334292-06363ad3961b?q=80&w=800&auto=format&fit=crop" 
+                    <img src="https://images.unsplash.com/photo-1504615755583-2916b52192de?q=80&w=800&auto=format&fit=crop" 
                          alt="Multi AC" class="w-full h-full object-cover transition duration-500"
                          onerror="this.style.display='none'">
                     <div class="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition duration-300 p-8 flex flex-col justify-end text-white">
                         <span data-i18n="p6-cat" class="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2">Residential</span>
-                        <h4 data-i18n="p6-title" class="text-xl font-bold leading-tight">ติดตั้งแอร์ Multi-Split สำหรับคอนโด</h4>
+                        <h3 data-i18n="p6-title" class="text-xl font-bold leading-tight">ติดตั้งแอร์ Multi-Split สำหรับคอนโด</h3>
                     </div>
                 </div>
             </div>
@@ -374,7 +375,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 data-i18n="contact-title" class="text-3xl md:text-5xl font-bold mb-4 text-white uppercase">ติดต่อขอรับบริการ</h2>
-                <p data-i18n="contact-desc" class="text-white opacity-90 max-w-2xl mx-auto">สอบถามปรึกษาปัญหาแอร์ฟรี หรือแจ้งความต้องการผ่านฟอร์ม ทีมงานจะติดต่อกลับโดยเร็วที่สุด</p>
+                <p data-i18n="contact-desc" class="text-white max-w-2xl mx-auto">สอบถามปรึกษาปัญหาแอร์ฟรี หรือแจ้งความต้องการผ่านฟอร์ม ทีมงานจะติดต่อกลับโดยเร็วที่สุด</p>
             </div>
 
             <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch text-sm md:text-base">
@@ -392,7 +393,7 @@
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 </div>
                                 <div>
-                                    <p data-i18n="label-address" class="text-blue-200 text-xs font-bold uppercase tracking-widest mb-1">ที่ตั้งร้าน</p>
+                                    <p data-i18n="label-address" class="text-blue-50 text-xs font-bold uppercase tracking-widest mb-1">ที่ตั้งร้าน</p>
                                     <p data-i18n="val-address" class="leading-snug">99/130 ม.1 ต.เกาะพะงัน<br>อ.เกาะพะงัน จ.สุราษฎร์ธานี 84280</p>
                                 </div>
                             </div>
@@ -403,7 +404,7 @@
                                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                     </div>
                                     <div>
-                                        <p data-i18n="label-phone" class="text-blue-200 text-xs font-bold uppercase tracking-widest mb-1">เบอร์โทรศัพท์</p>
+                                        <p data-i18n="label-phone" class="text-blue-50 text-xs font-bold uppercase tracking-widest mb-1">เบอร์โทรศัพท์</p>
                                         <p>084-842-7452</p>
                                     </div>
                                 </div>
@@ -412,7 +413,7 @@
                                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     </div>
                                     <div>
-                                        <p data-i18n="label-email" class="text-blue-200 text-xs font-bold uppercase tracking-widest mb-1">อีเมล</p>
+                                        <p data-i18n="label-email" class="text-blue-50 text-xs font-bold uppercase tracking-widest mb-1">อีเมล</p>
                                         <p>contact@airpro.com</p>
                                     </div>
                                 </div>
@@ -426,8 +427,8 @@
                     </div>
 
                     <div class="rounded-[2.5rem] overflow-hidden h-[250px] shadow-2xl border-4 border-white/20">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15501.761824338734!2d100.5516027!3d13.7533036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ed8702f3c0b%3A0x7d01f11e9f1a2386!2sSukhumvit%20Rd%2C%20Bangkok!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth" 
+                        <iframe id="google-map-iframe" title="PG Air Equipment location on Google Maps" 
+                            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15501.761824338734!2d100.5516027!3d13.7533036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ed8702f3c0b%3A0x7d01f11e9f1a2386!2sSukhumvit%20Rd%2C%20Bangkok!5e0!3m2!1sen!2sth!4v1700000000000!5m2!1sen!2sth" 
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -438,7 +439,7 @@
                     <div class="bg-gray-200 p-6 md:p-10 rounded-[2.5rem] shadow-2xl border border-white/20 flex-1">
                         <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
                             <div class="md:col-span-2 text-left">
-                                <label class="block text-gray-700 font-bold mb-2 ml-1">
+                                <label for="serviceType" class="block text-gray-700 font-bold mb-2 ml-1">
                                     <span data-i18n="form-label-service">ประเภทบริการที่ต้องการ</span> <span class="text-red-500">*</span>
                                 </label>
                                 <select id="serviceType" class="w-full bg-white border border-gray-300 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-blue-500/20 outline-none transition shadow-sm">
@@ -468,11 +469,11 @@
                             </div>
                             <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white/40 p-6 rounded-3xl border border-gray-300/50 text-left">
                                 <div>
-                                    <label data-i18n="form-label-date" class="block text-gray-700 font-bold mb-2 ml-1">วันที่สะดวก</label>
+                                    <label for="userDate" data-i18n="form-label-date" class="block text-gray-700 font-bold mb-2 ml-1">วันที่สะดวก</label>
                                     <input type="date" id="userDate" class="w-full bg-white border border-gray-300 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-blue-500/20 outline-none transition shadow-sm">
                                 </div>
                                 <div>
-                                    <label data-i18n="form-label-time" class="block text-gray-700 font-bold mb-2 ml-1">ช่วงเวลา</label>
+                                    <label for="userTime" data-i18n="form-label-time" class="block text-gray-700 font-bold mb-2 ml-1">ช่วงเวลา</label>
                                     <select id="userTime" class="w-full bg-white border border-gray-300 rounded-2xl px-6 py-4 focus:ring-4 focus:ring-blue-500/20 outline-none shadow-sm">
                                         <option value="morning" data-i18n="time-morning">เช้า (09:00-12:00)</option>
                                         <option value="afternoon" data-i18n="time-afternoon">บ่าย (13:00-17:00)</option>
@@ -504,7 +505,7 @@
                     <span class="text-xs opacity-80" data-i18n="ai-online">พร้อมให้คำปรึกษา 24 ชม.</span>
                 </div>
             </div>
-            <button onclick="toggleAIChat()" class="text-white hover:bg-white/10 p-2 rounded-lg transition">
+            <button onclick="toggleAIChat()" class="text-white hover:bg-white/10 p-2 rounded-lg transition" aria-label="Close AI chat" title="Close AI chat">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
@@ -519,14 +520,16 @@
         <div class="p-4 bg-white border-t border-gray-100">
             <div class="flex gap-2 bg-gray-100 p-2 rounded-2xl">
                 <input id="ai-input" type="text" data-i18n-placeholder="ai-input-placeholder" placeholder="พิมพ์คำถามของคุณ..." class="flex-1 bg-transparent px-3 py-2 outline-none text-sm">
-                <button onclick="sendAIMessage()" class="bg-blue-600 text-white p-2 rounded-xl hover:bg-blue-700 transition">
+                <button onclick="sendAIMessage()" class="bg-blue-600 text-white p-2 rounded-xl hover:bg-blue-700 transition" aria-label="Send message" title="Send message">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <button onclick="toggleAIChat()" class="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl z-[55] hover:scale-110 transition active:scale-95 group">
+    </main>
+
+    <button onclick="toggleAIChat()" class="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl z-[55] hover:scale-110 transition active:scale-95 group" aria-label="Open AI chat" title="Open AI chat">
         <span class="text-2xl group-hover:rotate-12 transition">✨</span>
     </button>
 
